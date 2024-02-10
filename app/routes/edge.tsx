@@ -27,6 +27,7 @@ export async function loader({ request }: LoaderArgs) {
 export function headers() {
   return {
     'x-edge-age': Date.now() - initialDate,
+    "Cache-Control": "max-age=10, s-maxage=30"
   };
 }
 
